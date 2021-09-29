@@ -1,0 +1,20 @@
+:root {
+  --credit-text-color: rgb(185, 48, 212);
+}
+
+#quote-box {
+  margin: auto;
+  margin-top: 10vh;
+  padding: 2rem;
+  width: 50%;
+  background-color: red;
+  border-radius: 0.2rem;
+}
+
+#credits {
+  color: var(--credit-text-color);
+}
+
+#credits > a {
+  color: var(--credit-text-color);
+}
