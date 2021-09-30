@@ -16,7 +16,9 @@ const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 const renderInteractives = (quote) => {
   const { text: currentText } = quote;
-  const currentAuthor = quote.author ?? "Unknown";
+  const currentAuthor = quote.author ?? "Unknown"; //If invalid author, replace with Unknown
+
+  //Colors and animations + replace text
   const r = clamp(random(255), 25, 195);
   const g = clamp(random(255), 25, 195);
   const b = clamp(random(255), 25, 195);
@@ -33,10 +35,13 @@ const renderInteractives = (quote) => {
     { backgroundColor: currentColor, color: currentColor },
     1000
   );
-  $(".btn").animate(
-    { backgroundColor: currentColor },
-    1000
-  );
+  $(".btn").animate({ backgroundColor: currentColor }, 1000);
+
+  //When user clicks twitter link
+  const uri = `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${encodeURIComponent(
+    `"${currentText}" -${currentAuthor}`
+  )}`;
+  $("#tweet-quote").attr("href", uri);
 };
 
 $(document).ready(() => {
