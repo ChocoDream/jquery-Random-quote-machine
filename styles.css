@@ -1,5 +1,5 @@
 :root {
-  --credit-text-color: rgb(185, 48, 212);
+  --credit-text-color: rgb(255, 255, 255);
 }
 
 #quote-box {
@@ -7,8 +7,8 @@
   margin-top: 10vh;
   padding: 2rem;
   width: 50%;
-  background-color: red;
-  border-radius: 0.2rem;
+  background-color: white;
+  border-radius: 0.4rem;
 }
 
 #credits {
@@ -17,4 +17,8 @@
 
 #credits > a {
   color: var(--credit-text-color);
+}
+
+.btn{
+  color: white !important;
 }
