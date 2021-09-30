@@ -58,3 +58,12 @@
   opacity: 0.8;
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  #quote-box {
+    margin: auto;
+    margin-top: 10vh;
+    padding: 2rem;
+    width: 95%;
+  }
+}
