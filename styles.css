@@ -2,6 +2,8 @@
   --credit-text-color: rgb(255, 255, 255);
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
 #quote-box {
   margin: auto;
   margin-top: 10vh;
@@ -9,6 +11,18 @@
   width: 50%;
   background-color: white;
   border-radius: 0.4rem;
+}
+
+#text {
+  font-weight: 400;
+  font-size: 2.6rem;
+  font-family: "Lora", serif;
+}
+
+#author {
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Lora", serif;
 }
 
 #credits {
@@ -19,6 +33,28 @@
   color: var(--credit-text-color);
 }
 
-.btn{
-  color: white !important;
+.buttons {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.button {
+  padding: 0.5rem 0.8rem;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 200ms;
+  font-family: "Lora", serif;
+}
+
+.button:hover {
+  opacity: 0.8;
+  color: white;
 }
